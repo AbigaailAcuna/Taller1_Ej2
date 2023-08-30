@@ -26,6 +26,7 @@ export const Header = ({
     };
 
     return (
+       
         <header>
             <h1>Jaguar Sport</h1>
             <div className='container-icon'>
@@ -49,48 +50,64 @@ export const Header = ({
                 >
                     {allProducts.length ? (
                         <>
+
                             <div className='row-product'>
+                                <div className="titulo-carrito">
+                                    <h2>Carrito de Compras</h2>
+                                </div>
                                 {allProducts.map(product => (
-                                    <div className='cart-product'
-                                        key={product.id}>
-                                        <div className='info-cart-product'>
-                                            <p
-                                                className='titulo-producto-carrito'>
-                                                {product.title}
-                                            </p>
-                                            <span
-                                                className='precio-producto-carrito'>
-                                                ${product.price}
-                                            </span>
-                                            <img
-                                                src={product.urlImage}
-                                                alt={product.title}
-                                                className='imagen-producto-carrito'
-                                            />
-                                        </div>
+                                    <div className='cart-product' key={product.id}>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img
+                                                            src={product.urlImage}
+                                                            alt={product.title}
+                                                            className='imagen-producto-carrito'
+                                                        />
+                                                    </td>
+                                                    <td>
+                                                        <p className='titulo-producto-carrito'>
+                                                            {product.title}
+                                                        </p>
+                                                        <div className="precio">
+                                                            <span className='precio-producto-carrito'>
+                                                                ${product.price}
+                                                            </span>
+                                                            <input
+                                                                className="cantidad"
+                                                                type="number"
+                                                                value={product.quantity}
+                                                                onChange={(event) => {
+                                                                    const newQuantity = parseInt(event.target.value);
+                                                                    if (!isNaN(newQuantity) && newQuantity >= 1) {
+                                                                        const updatedProducts = allProducts.map((item) =>
+                                                                            item.id === product.id
+                                                                                ? { ...item, quantity: newQuantity }
+                                                                                : item
+                                                                        );
 
-                                        <input className="cantidad"
-                                            type="number"
-                                            value={product.quantity}
-                                            onChange={(event) => {
-                                                const newQuantity = parseInt(event.target.value);
-                                                if (!isNaN(newQuantity) && newQuantity >= 1) {
-                                                    const updatedProducts = allProducts.map((item) =>
-                                                        item.id === product.id
-                                                            ? { ...item, quantity: newQuantity }
-                                                            : item
-                                                    );
+                                                                        const newTotal = updatedProducts.reduce(
+                                                                            (acc, item) => acc + item.price * item.quantity,
+                                                                            0
+                                                                        );
 
-                                                    const newTotal = updatedProducts.reduce(
-                                                        (acc, item) => acc + item.price * item.quantity,
-                                                        0
-                                                    );
-
-                                                    setTotal(newTotal);
-                                                    setAllProducts(updatedProducts);
-                                                }
-                                            }}
-                                        />
+                                                                        setTotal(newTotal);
+                                                                        setAllProducts(updatedProducts);
+                                                                    }
+                                                                }}
+                                                            />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                       
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                         <img
                                             src="https://i.pinimg.com/564x/09/90/f8/0990f82b768e363f0dec55de307fdf4c.jpg"
                                             alt="cerrar"

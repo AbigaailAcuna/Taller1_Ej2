@@ -12,6 +12,7 @@ body{
     max-width: 1200px;
     font-family: 'Lato';
     color: #333;
+    
 }
 
 .icon-cart{
@@ -38,6 +39,8 @@ header{
 .container-icon{
     position: relative;
 }
+
+
 
 .count-products{
     position: absolute;
@@ -77,7 +80,8 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 30px;
-
+    border: none;               
+    background-color: transparent;
     border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 
 }
@@ -95,7 +99,11 @@ header{
 .precio-producto-carrito{
     font-weight: 700;
     font-size: 20px;
-    margin-left: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-right: 20px;
+    justify-content: center;
+
 }
 
 .cantidad-producto-carrito{
@@ -119,16 +127,19 @@ header{
     align-items: center;
     padding: 20px 0;
     gap: 20px;
+    border-top: 1px solid black;
 }
 
 .cart-total h3{
     font-size: 20px;
     font-weight: 700;
+    
 }
 
 .total-pagar{
     font-size: 20px;
     font-weight: 900;
+   
 }
 
 .hidden-cart{
@@ -138,13 +149,15 @@ header{
 .row-product {
     display: flex;
     flex-direction: column; 
+    border: none;               
+    background-color: transparent;
   }
   
   .cart-product {
     display: flex;
     align-items: center; 
     padding: 10px;
-    border: 1px solid #ddd;
+    border: none;
     margin-bottom: 10px; 
   }
   
@@ -153,6 +166,7 @@ header{
     display: flex;
     flex-direction: column;
     margin-right: 10px;
+    
   }
   
   .imagen-producto-carrito {
@@ -194,7 +208,8 @@ header{
     height: 250px; /* Auto para mantener la proporción original */
     border-radius: 4px;
     margin-bottom: 10px; /* Espacio entre la imagen y la descripción */
-    margin-top: 10px;
+    margin-top: 20px;
+   
 }
 
 .item figure{
@@ -217,11 +232,9 @@ header{
     flex-direction: column;
     justify-content: space-between; /* Distribuir el contenido de manera uniforme */
     align-items: center; /* Centrar en el eje horizontal */
+   
 }
-.info-product h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
+
 
 .price {
     font-size: 20px;
@@ -236,6 +249,7 @@ header{
     margin-bottom: 5px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
 }
 
 .info-product h2:last-child {
@@ -281,4 +295,19 @@ button:hover {
 
 .hidden{
     display: none;
+}
+.titulo-producto-carrito {
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+.titulo-carrito{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid black;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.titulo-carrito h2{
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
