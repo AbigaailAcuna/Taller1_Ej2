@@ -26,9 +26,13 @@ export const Header = ({
     };
 
     return (
-       
+
         <header>
-            <h1>Jaguar Sport</h1>
+           
+            <div className="encabezado">
+                <h1>Jaguar Sport</h1>
+            </div>
+
             <div className='container-icon'>
                 <div
                     className='container-cart-icon'
@@ -103,7 +107,7 @@ export const Header = ({
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                       
+
                                                     </td>
                                                 </tr>
                                             </tbody>

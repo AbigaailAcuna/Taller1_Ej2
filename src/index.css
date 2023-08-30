@@ -19,6 +19,7 @@ body{
     width: 40px;
     height: 40px;
     stroke: #000;
+    
 }
 
 .icon-cart:hover{
@@ -38,6 +39,7 @@ header{
 
 .container-icon{
     position: relative;
+    background-color: yellow;
 }
 
 
@@ -66,7 +68,6 @@ header{
     position: absolute;
     top: 50px;
     right: 0;
-
     background-color: #fff;
     width: 400px;
     z-index: 1;
@@ -218,6 +219,7 @@ header{
 .encabezado{
     background-color: yellow;
     width: 100%;
+
 }
 header{
     width: 100%;
