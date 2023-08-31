@@ -28,7 +28,7 @@ export const Header = ({
     return (
 
         <header>
-           
+
             <div className="encabezado">
                 <h1>Jaguar Sport</h1>
             </div>
